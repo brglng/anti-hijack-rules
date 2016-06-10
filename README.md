@@ -17,6 +17,6 @@ iptables -I FORWARD -p tcp --sport 80 --tcp-flags ACK ACK -m string --algo bm --
 iptables -I FORWARD -p tcp --sport 80 --tcp-flags ACK ACK -m string --algo bm --string "<div id=\"ad\"" -j LOG --log-level info --log-prefix="hijack1: "
 iptables -I FORWARD -p tcp --sport 80 --tcp-flags ACK ACK -m string --algo bm --string "<div id=\"ad_id\"" -j REJECT
 iptables -I FORWARD -p tcp --sport 80 --tcp-flags ACK ACK -m string --algo bm --string "<div id=\"ad_id\"" -j LOG --log-level info --log-prefix="hijack2: "
-iptables -I FORWARD -p tcp --sport 80 --tcp-flags ACK ACK -m string --algo bm --string "120.27.28.39/hw/kd58008.html" -j REJECT
-iptables -I FORWARD -p tcp --sport 80 --tcp-flags ACK ACK -m string --algo bm --string "120.27.28.39/hw/kd58008.html" -j LOG --log-level info --log-prefix="hijack3: "
+iptables -I FORWARD -p tcp --sport 80 --tcp-flags ACK ACK -m string --algo bm --string "120.27.28.39/hw/kd58008" -j REJECT
+iptables -I FORWARD -p tcp --sport 80 --tcp-flags ACK ACK -m string --algo bm --string "120.27.28.39/hw/kd58008" -j LOG --log-level info --log-prefix="hijack3: "
 ```
